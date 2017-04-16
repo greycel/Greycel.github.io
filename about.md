@@ -3,8 +3,14 @@ layout: page
 title: About
 ---
 
-<p class="message">
-  Hey there! I'm into security, which meant to learn new things every day.  In the meantime I was trying to share somethings that I learnt.. Hoping this would be helpdul to someone.
+  Hey there! 
+
+  I'm into Information security, since for awhile and I believe its all about learning new things everyday.  
+
+  Here I wanted to share bits and pieces of information i learnt from my experience.
+
+  Hoping this would be helpful to someone.
 
   Thanks
-</p>
+
+
