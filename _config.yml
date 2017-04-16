@@ -1,1 +1,23 @@
-theme: jekyll-theme-minimal
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Greycel
+tagline:             'Another Security Blog'
+description:         'Keep Learning..'
+url:                 https://greycel.github.io
+baseurl:             ''
+paginate:            1
+gems:               [jekyll-paginate]
+
+# About/contact
+author:
+  name:              Grey
+  url:               https://twitter.com/greycel1101
+  email:             greycel1101@gmail.com
+
+# Custom vars
+#version:             1.0.0
