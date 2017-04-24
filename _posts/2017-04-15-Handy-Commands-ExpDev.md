@@ -4,8 +4,9 @@ title: Handy Commands for Exploit Development
 ---
 
 <div class="message"> 
-Hey, Thought of adding few handy commands and utilities that I've been using frequently during exploit development.
+Handy Tools and Commands useful during Exploit Development.
 </div>
+
 
 
 
