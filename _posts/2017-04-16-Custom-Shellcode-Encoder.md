@@ -63,7 +63,7 @@ print "\n[*] Rolling Xor Output F2: \n%s" %xorout_f2
 ----
 
 
-###Decoder Stub
+### Decoder Stub
 
 Following is our decoder stub which helps us to decode the encoded shellcode. Here we will be using JMP-CALL-POP technique, to get to our encoded shellcode and thereafter we decode the shellcode back to original at runtime and execute it.
 
@@ -122,7 +122,7 @@ Having the above decoder stub ready, with the help of "nasm" compile the assembl
 
 
 
-###Executing the Shellcode on Windows
+### Executing the Shellcode on Windows
 
 For POC purpose, I've used the encoded message box shellcode which would eventually gets decoded at runtime with our decoded stub and executes the Hello World Message Box Popup. Following is our actual decoder stub in debugger without the encoded shellcode
 
