@@ -14,7 +14,7 @@
 <![CDATA[
 
 		var r = new ActiveXObject("WScript.Shell")
-		var x = WshShell.Exec('cmd "calc"');
+		var x = r.Exec('cmd "calc"');
 	
 	
 ]]>
