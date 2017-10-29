@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BatRabbit Closer Look with BluSapphire
+title: BadRabbit Closer Look with BluSapphire
 ---
 
 Since the outbreak of Petya/NotPetya which was surfaced in the month of June, again last week a new ransomware attack "aka BadRabbit" is making the headlines effecting machines in Ukraine, Russia, Turkey and Bulgaria. 
