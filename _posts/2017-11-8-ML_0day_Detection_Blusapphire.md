@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ZeroDay Detection: Blusapphire Machine Learning(ML)
+title: ZeroDay Detection{%: %} Blusapphire Machine Learning(ML)
 ---
 
 Year2016 & 2017 has witnessed the rise in cyber attacks targeting various sectors like banking, industrial, etc. New variants and types (fileless/in-memory) of malware families are being surfacing each day (wannacry, Petya/NotPetya/Nyetya/Goldeneye, BadRabbit, etc) which a traditional antivirus engine couldn't detect without a signature. 
