@@ -9,7 +9,7 @@ With advancement in today's cybercrime, there's being advancement in detection o
 
 Blusapphire is being integrated with Machine Learning (ML) engine that is capable of detecting any potential threats the moment they enter the network, making it easy to detect such sophisticated threats.
 
-Last week one of our sensors has collected a file, which was flagged malicious by our Machine Learning (ML) engine. Being a zero-day, at that point in time, it has not triggered any AV flags. I would want to post the analysis made by Blusapphire.
+Last week one of our sensors has collected a file, which was flagged malicious by our Machine Learning (ML) engine. Being a zero-day, at that point in time, it has not triggered any AV flags. This post is an overview of the analysis made by Blusapphire ML engine.
 
 ----
 
