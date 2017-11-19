@@ -5,7 +5,7 @@ title: ZeroDay Detection with Machine Learning(ML) Blusapphire
 
 Year2016 & 2017 has witnessed the rise in cyber attacks targeting various sectors like banking, industrial, etc. New variants and types (fileless/in-memory) of malware families are being surfacing each day (wannacry, Petya/NotPetya/Nyetya/Goldeneye, BadRabbit, etc) which a traditional antivirus engine couldn't detect without a signature. 
 
-With advancement in today's cybercrime, there's also being advancement in detection of such potential threats, which brings me to Machine Learning (ML). According to wiki, Machine Learning (ML) is a field of computer science that gives computers the ability to learn without being explicitly programmed. In other words, computer trained to learn and identify malicious threats on its own.
+With advancement in today's cybercrime, there's being advancement in detection of such potential threats, which brings me to Machine Learning (ML). According to wiki, Machine Learning (ML) is a field of computer science that gives computers the ability to learn without being explicitly programmed. In other words, computer trained to learn and identify malicious threats on its own.
 
 Blusapphire is being integrated with Machine Learning (ML) engine that is capable of detecting any potential threats the moment they enter the network.
 
