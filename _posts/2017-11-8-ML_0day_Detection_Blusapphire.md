@@ -7,7 +7,7 @@ Year2016 & 2017 has witnessed the rise in cyber attacks targeting various sector
 
 With advancement in today's cybercrime, there's being advancement in detection of such potential threats, which brings me to Machine Learning (ML). According to wiki, Machine Learning (ML) is a field of computer science that gives computers the ability to learn without being explicitly programmed. In other words, computer trained to learn and identify malicious threats on its own.
 
-Blusapphire is being integrated with Machine Learning (ML) engine that is capable of detecting any potential threats the moment they enter the network.
+Blusapphire is being integrated with Machine Learning (ML) engine that is capable of detecting any potential threats the moment they enter the network, making it easy to detect such sophisticated threats.
 
 Last week one of our sensors has collected a file, which was flagged malicious by our Machine Learning (ML) engine. Being a zero-day, at that point in time, it has not triggered any AV flags. I would want to post the analysis made by Blusapphire.
 
