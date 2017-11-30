@@ -46,6 +46,14 @@ LogLevel INFO
 </Input>
 
 
+<Input in>
+    Module      im_msvistalog
+	Query <QueryList> <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational"> <Select Path="Microsoft-Windows-Sysmon/Operational">*</Select> </Query> <Query Id="1" Path="Microsoft-Windows-PowerShell/Operational"> <Select Path="Windows PowerShell">*[System[(EventID=400 or EventID=403)]]</Select> <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(EventID=4103)]]</Select> <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(Level=5) and (EventID=4104)]]</Select> <Suppress Path="Microsoft-Windows-PowerShell/Operational">*[EventData[Data[@Name='ScriptBlockText']='prompt']] or *[EventData[Data[@Name='ScriptBlockText']='$global:?']] </Suppress> </Query> </QueryList>
+</Input>
+
+
+
+
 
 
 #<Output out>
