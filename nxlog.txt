@@ -5,8 +5,8 @@
 ## Please set the ROOT to the folder your nxlog was installed into,
 ## otherwise it will not start.
 
-#define ROOT C:\Program Files\nxlog
-define ROOT C:\Program Files (x86)\nxlog
+define ROOT C:\Program Files\nxlog
+#define ROOT C:\Program Files (x86)\nxlog
 
 Moduledir %ROOT%\modules
 CacheDir %ROOT%\data
@@ -23,54 +23,39 @@ LogLevel INFO
     Module      xm_json
 </Extension>
 
+
 <Input in>
     Module      im_msvistalog
-	Query <QueryList> \
-			<Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">\
-				<Select Path="Microsoft-Windows-Sysmon/Operational">*</Select>\
-			</Query>\
-			<Query Id="1" Path="Microsoft-Windows-PowerShell/Operational"> \
-			
-				<!-- Selects PowerShell Session Logging(400, 403) PowerShell 5+ --> \				
+    Query <QueryList> \
+				<Query Id="0" Path="Microsoft-Windows-Sysmon/Operational">\
+					<Select Path="Microsoft-Windows-Sysmon/Operational">*</Select>\
+				</Query> \
+				<Query Id="1" Path="Microsoft-Windows-PowerShell/Operational"> \
 				<Select Path="Windows PowerShell">*[System[(EventID=400 or EventID=403)]]</Select> \
-				
-				<!-- Selects PowerShell Module Logging(4103) and Script Block Tracing(4104) warnings, PowerShell 5+ --> \
 				<Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(EventID=4103)]]</Select> \
 				<Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(Level=5) and (EventID=4104)]]</Select> \
-					<!-- Suppress common system activity --> \
 					<Suppress Path="Microsoft-Windows-PowerShell/Operational">*[EventData[Data[@Name='ScriptBlockText']='prompt']] or *[EventData[Data[@Name='ScriptBlockText']='$global:?']] </Suppress> \
-				
-			</Query> \
-          </QueryList> \
-
+				</Query> \
+				</QueryList>
 </Input>
 
-
-<Input in>
-    Module      im_msvistalog
-	Query <QueryList> <Query Id="0" Path="Microsoft-Windows-Sysmon/Operational"> <Select Path="Microsoft-Windows-Sysmon/Operational">*</Select> </Query> <Query Id="1" Path="Microsoft-Windows-PowerShell/Operational"> <Select Path="Windows PowerShell">*[System[(EventID=400 or EventID=403)]]</Select> <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(EventID=4103)]]</Select> <Select Path="Microsoft-Windows-PowerShell/Operational">*[System[(Level=5) and (EventID=4104)]]</Select> <Suppress Path="Microsoft-Windows-PowerShell/Operational">*[EventData[Data[@Name='ScriptBlockText']='prompt']] or *[EventData[Data[@Name='ScriptBlockText']='$global:?']] </Suppress> </Query> </QueryList>
-</Input>
-
-
-
-
-
-
-#<Output out>
-#    Module      om_tcp
-#    Host        192.168.1.1
-#    Port        514
-#    Exec        to_syslog_snare();
-#</Output>
 
 <Output out>
-	Module	om_file
-	File		'C:\Users\admin\Desktop\asdf.json'
-	Exec to_json();
+    Module      om_tcp
+    Host        127.0.0.1
+    Port        12345
+    Exec        to_json();
+# $Message = $ raw_event; to_syslog_bsd();
 </Output>
 
+#<Output out>
+#        Module  om_file
+#        File            'C:\Users\Blues\Desktop\asdf.json'
+#        Exec to_json();
+#</Output>
+
 <Route 1>
-    Path        in => out
+	Path	in => out
 </Route>
 
 
